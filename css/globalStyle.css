@@ -317,6 +317,10 @@ footer p strong {
   }
 }
 
+.radius{
+    border-radius: 30px;
+}
+
 .color1{
     color: #EE5830;
 }
@@ -330,14 +334,6 @@ footer p strong {
     color: #EE5830;
 }
 
-/* for demo */
-/* body {
-  background-color: #c6c9ce;
-  padding: 2rem;
-} */
-/* h1 {
-  text-transform: uppercase;
-  font-family: sans-serif;
-  text-align: center;
-  color: #222;
-} */
+.ctnt{
+    font-size: 20px;
+}
