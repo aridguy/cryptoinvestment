@@ -337,3 +337,16 @@ footer p strong {
 .ctnt{
     font-size: 20px;
 }
+
+.plans{
+    border-radius: 4px;
+    border: 6px solid #4CBEB8;
+    padding: 14px;
+    width: 100%;
+    transition: 1s;
+    margin-bottom: 1em;
+}
+.plans:hover{
+    position: relative;
+    bottom: 8px;
+}
