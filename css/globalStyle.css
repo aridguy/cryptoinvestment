@@ -353,7 +353,7 @@ footer p strong {
 }
 
 .call-to-action{
-    background-image: url('/assets/low-banner.jpg');
+    background-image: url('../assets/about.jpg');
     background-size: cover;
     width: 100%;
     padding: 7em;
@@ -527,10 +527,10 @@ ul {
     height: 6em;
 }
 .landing-about{
-    background-image: url('/assets/low-banner.jpg');
+    background-image: url('../assets/about.jpg');
     background-size: cover;
     width: 100%;
-    height: 16em;
+    height: 18em;
     
 }
 .abt-center{

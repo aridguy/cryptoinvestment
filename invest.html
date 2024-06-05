@@ -75,13 +75,13 @@
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
-              <button
+              <a href="invest.html"
                 data-mdb-ripple-init
                 type="button"
                 class="btn btn-primary me-3"
               >
                 Invest Now
-              </button>
+              </a>
             </div>
           </div>
           <!-- Collapsible wrapper -->
@@ -112,7 +112,37 @@
                   reporting requirements for the portfolio.
                 </p>
               </div>
+                <i class="text-danger">carefully go through the form below and complete necessary questions</i>
               <form action="/submit_form" method="post">
+                <label for="q1">1) Have you ever used cryptocurrency as a mode of payment before?</label><br>
+                <input type="radio" id="q1_yes" name="q1" value="yes">
+                <label for="q1_yes">Yes</label><br>
+                <input type="radio" id="q1_no" name="q1" value="no">
+                <label for="q1_no">No</label><br><br>
+        
+                <label for="q2">2) Have you ever invested in any form of cryptocurrency before?</label><br>
+                <input type="radio" id="q2_yes" name="q2" value="yes">
+                <label for="q2_yes">Yes</label><br>
+                <input type="radio" id="q2_no" name="q2" value="no">
+                <label for="q2_no">No</label><br><br>
+        
+                <label for="q3">3) If you were to buy a cryptocurrency asset, which one would it be?</label><br>
+                <input type="text" id="q3" name="q3"><br><br>
+        
+                <label for="q4">4) Would you be willing to invest in cryptocurrency if the investment environment is right?</label><br>
+                <input type="radio" id="q4_yes" name="q4" value="yes">
+                <label for="q4_yes">Yes</label><br>
+                <input type="radio" id="q4_no" name="q4" value="no">
+                <label for="q4_no">No</label><br><br>
+        
+                <label for="q5">5) What is the maximum you would consider investing in cryptocurrency assets?</label><br>
+                <input type="number" id="q5" name="q5"><br><br>
+        
+                <label for="q6">6) Are you open to investing and trading in commodities such as gold and crude oil?</label><br>
+                <input type="radio" id="q6_yes" name="q6" value="yes">
+                <label for="q6_yes">Yes</label><br>
+                <input type="radio" id="q6_no" name="q6" value="no">
+                <label for="q6_no">No</label><br><br>
                 <label for="investment_strategy"
                   >1. Please indicate the desired emphasis of the investment
                   strategy for your portfolio:</label
@@ -530,5 +560,16 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
     ></script>
+
+
+    <script>
+      document.getElementById("pressAm").onclick = function () {
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success",
+        });
+      };
+    </script>
   </body>
 </html>

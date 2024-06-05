@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Contact Us</title>
     <!-- bootsrap cdn -->
     <!-- Font Awesome -->
@@ -75,14 +76,14 @@
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
-              <button
+              <a href="invest.html"
                 data-mdb-ripple-init
                 type="button"
                 class="btn btn-primary me-3"
               >
                 <i class="fas fa-circle-right"></i>
                 Invest Now
-              </button>
+              </a>
               <div id="google_translate_element"></div>
             </div>
           </div>
@@ -98,7 +99,7 @@
             <h2 class="text-white">
               Your financial plan begins with a conversation
             </h2>
-            <button class="btn btn-info btn-lg mt-2">Contact us today</button>
+            <button id="pressAm" class="btn btn-info btn-lg mt-2">Contact us today</button>
           </div>
           <div class="col-md-3">
             <script
@@ -279,5 +280,16 @@
     emailjs.init("YOUR_USER_ID");
 
   </script>
+
+
+<script>
+  document.getElementById("pressAm").onclick = function () {
+    Swal.fire({
+      title: "Hello Visitor!",
+      text: "use the contact form below!",
+      icon: "question",
+    });
+  };
+</script>
   </body>
 </html>
