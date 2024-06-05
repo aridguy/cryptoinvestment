@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Investment Questionaira</title>
+    <!-- bootsrap cdn -->
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/globalStyle.css" />
+    <!-- <link rel="stylesheet" href="counter.css"> -->
+    <script
+      type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    ></script>
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "en" },
+          "google_translate_element"
+        );
+      }
+    </script>
+  </head>
+<body>
+    <form action="/submit_form" method="post">
+        <h1>Investment Questionnaire</h1>
+
+        <label for="investment_strategy">1. Please indicate the desired emphasis of the investment strategy for your portfolio:</label><br>
+        <input type="radio" id="income" name="investment_strategy" value="income">
+        <label for="income">Generation of current investment income</label><br>
+        <input type="radio" id="return" name="investment_strategy" value="return">
+        <label for="return">Total investment return</label><br><br>
+
+        <label for="time_horizon">2. Please check the selection that best describes your investment time horizon:</label><br>
+        <input type="radio" id="less_than_3" name="time_horizon" value="less_than_3">
+        <label for="less_than_3">Less than 3 years</label><br>
+        <input type="radio" id="3_to_5" name="time_horizon" value="3_to_5">
+        <label for="3_to_5">3 - 5 years</label><br>
+        <input type="radio" id="5_to_10" name="time_horizon" value="5_to_10">
+        <label for="5_to_10">5 - 10 years</label><br>
+        <input type="radio" id="over_10" name="time_horizon" value="over_10">
+        <label for="over_10">Over 10 years</label><br><br>
+
+        <label for="investment_strategy_appropriate">3. Please select the investment strategy that you feel is most appropriate:</label><br>
+        <input type="radio" id="capital_preservation" name="investment_strategy_appropriate" value="capital_preservation">
+        <label for="capital_preservation">Capital Preservation</label><br>
+        <input type="radio" id="balanced" name="investment_strategy_appropriate" value="balanced">
+        <label for="balanced">Balanced</label><br>
+        <input type="radio" id="growth" name="investment_strategy_appropriate" value="growth">
+        <label for="growth">Growth</label><br><br>
+
+        <label for="primary_objective">4. Please identify the objective below that most closely matches your primary objective by marking a number ‘1’ next to it. Secondary objectives, if any, should be ranked starting with the number ‘2’, then ‘3’, etc. There is no need to rank every objective; only the objectives that are important to you.</label><br>
+        <textarea id="primary_objective" name="primary_objective" rows="4" cols="50"></textarea><br><br>
+
+        <label for="risk_tolerance">5. On the following scale please indicate your tolerance for risk:</label><br>
+        <input type="range" id="risk_tolerance" name="risk_tolerance" min="1" max="10"><br><br>
+
+        <label for="definition_of_risk">6. Which of the following most closely reflects your definition of risk?</label><br>
+        <select id="definition_of_risk" name="definition_of_risk">
+            <option value="losing_money_any_period">The probability of losing money over any time period</option>
+            <option value="losing_money_investment_horizon">The probability of losing money over the investment horizon</option>
+            <option value="not_maintaining_purchasing_power">The probability of not maintaining purchasing power over the investment horizon</option>
+            <option value="not_meeting_objectives">The probability of not meeting the portfolio's objectives</option>
+            <option value="not_meeting_cash_flow_requirements">The probability of not meeting the portfolio's cash flow requirements</option>
+            <option value="not_meeting_market_index">The probability that the investment returns fail to meet or exceed a specified market index</option>
+            <option value="significant_fluctuations">The probability that the investment returns fluctuate significantly</option>
+        </select><br><br>
+
+        <label for="greatest_loss_tolerance">7. What is the greatest loss you could tolerate over any single twelve-month period?</label><br>
+        <input type="radio" id="0_to_5" name="greatest_loss_tolerance" value="0_to_5">
+        <label for="0_to_5">0% to -5%</label><br>
+        <input type="radio" id="5_to_10" name="greatest_loss_tolerance" value="5_to_10">
+        <label for="5_to_10">-5% to -10%</label><br>
+        <input type="radio" id="10_to_20" name="greatest_loss_tolerance" value="10_to_20">
+        <label for="10_to_20">-10% to -20%</label><br>
+        <input type="radio" id="more_than_20" name="greatest_loss_tolerance" value="more_than_20">
+        <label for="more_than_20">More than -20%</label><br><br>
+
+        <label for="risk_tolerance_explanation">8. Would you define your tolerance for risk in terms other than percentage of assets lost, such as the amount of money you could accept losing over a specific time frame? Is there a base level of wealth below which you cannot accept further losses? If so, please explain.</label><br>
+        <textarea id="risk_tolerance_explanation" name="risk_tolerance_explanation" rows="4" cols="50"></textarea><br><br>
+
+        <label for="investment_decline_response">9. If a particular investment in this portfolio declined by 20% in value and nothing changed fundamentally with regard to this investment, what would you be most likely to do:</label><br>
+        <input type="radio" id="sell" name="investment_decline_response" value="sell">
+        <label for="sell">Sell</label><br>
+        <input type="radio" id="hold" name="investment_decline_response" value="hold">
+        <label for="hold">Hold</label><br>
+        <input type="radio" id="buy_more" name="investment_decline_response" value="buy_more">
+        <label for="buy_more">Buy More</label><br><br>
+
+        <label for="action_in_2008">10. What action was taken in 2008 when the S&P 500 declined 37%?</label><br>
+        <input type="radio" id="bought_more" name="action_in_2008" value="bought_more">
+        <label for="bought_more">Bought More</label><br>
+        <input type="radio" id="sold_part" name="action_in_2008" value="sold_part">
+        <label for="sold_part">Sold part of the investment</label><br>
+        <input type="radio" id="sold_all" name="action_in_2008" value="sold_all">
+        <label for="sold_all">Sold all of the investment</label><br>
+        <input type="radio" id="held" name="action_in_2008" value="held">
+        <label for="held">Held the investment</label><br><br>
+
+        <label for="risk_tolerance_impact_2008">11. What impact did the events of 2008 have on your risk tolerance?</label><br>
+        <textarea id="risk_tolerance_impact_2008" name="risk_tolerance_impact_2008" rows="4" cols="50"></textarea><br><br>
+
+        <label for="uncomfortable_assets">12. Are there any asset classes or strategies that you are not comfortable with and/or that you would like to learn more about?</label><br>
+        <textarea id="uncomfortable_assets" name="uncomfortable_assets" rows="4" cols="50"></textarea><br><br>
+
+        <label for="other_significant_holdings">13. Are there any other significant holdings (real estate, art, etc.) that we should consider as we develop your investment strategy?</label><br>
+        <textarea id="other_significant_holdings" name="other_significant_holdings" rows="4" cols="50"></textarea><br><br>
+
+        <label for="reasonable_objectives">14. What would you consider to be reasonable objective(s) for your investment portfolio? (Objectives can be stated in terms of return and/or other quantifiable or non-quantifiable measures.)</label><br>
+        <textarea id="reasonable_objectives" name="reasonable_objectives" rows="4" cols="50"></textarea><br><br>
+
+        <label for="success_measure_time_period">15. Over what time period do you feel it is reasonable to measure the success of achieving these objectives?</label><br>
+        <textarea id="success_measure_time_period" name="success_measure_time_period" rows="4" cols="50"></textarea><br><br>
+
+        <label for="investment_manager_time">16. What do you feel is a fair amount of time to stay with an investment manager who is falling short of the goals given him or her?</label><br>
+        <textarea id="investment_manager_time" name="investment_manager_time" rows="4" cols="50"></textarea><br><br>
+
+        <label for="pressing_issues">17. What do you think are the most pressing issues for the investment portfolio? (Please rank in order of importance with 1 being the highest ranking)</label><br>
+        <textarea id="pressing_issues" name="pressing_issues" rows="4" cols="50"></textarea><br><br>
+
+        <label for="greatest_concerns">18. What are your greatest concerns about the portfolio’s ability to meet its investment objectives going forward?</label><br>
+        <textarea id="greatest_concerns" name="greatest_concerns" rows="4" cols="50"></textarea><br><br>
+
+        <label for="other_issues">19. Please explain any other issues you feel are important that we address as we review the investment program.</label><br>
+        <textarea id="other_issues" name="other_issues" rows="4" cols="50"></textarea><br><br>
+
+        <label for="spending_liquidity_needs">20. Please provide an estimate of your spending and liquidity needs over the next 12 to 36 months. Please include expected annual required distributions for living expenses, office expenses, etc.</label><br>
+        <textarea id="spending_liquidity_needs" name="spending_liquidity_needs" rows="4" cols="50"></textarea><br><br>
+
+        <label for="review_frequency">21. How often would you like to get together to formally review investment performance?</label><br>
+        <textarea id="review_frequency" name="review_frequency" rows="4" cols="50"></textarea><br><br>
+
+        <label for="additional_comments">22. Please list any other information or comments concerning your investment experience that you feel are important for us to learn as we together develop your investment plan.</label><br>
+        <textarea id="additional_comments" name="additional_comments" rows="4" cols="50"></textarea><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
