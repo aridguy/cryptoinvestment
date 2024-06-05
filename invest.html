@@ -75,7 +75,8 @@
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
-              <a href="invest.html"
+              <a
+                href="invest.html"
                 data-mdb-ripple-init
                 type="button"
                 class="btn btn-primary me-3"
@@ -112,39 +113,114 @@
                   reporting requirements for the portfolio.
                 </p>
               </div>
-                <i class="text-danger">carefully go through the form below and complete necessary questions</i>
+              <i class="text-danger"
+                >carefully go through the form below and complete necessary
+                questions</i
+              >
+
+              <h3 class="text-info">Section 1</h3>
               <form action="/submit_form" method="post">
-                <label for="q1">1) Have you ever used cryptocurrency as a mode of payment before?</label><br>
-                <input type="radio" id="q1_yes" name="q1" value="yes">
-                <label for="q1_yes">Yes</label><br>
-                <input type="radio" id="q1_no" name="q1" value="no">
-                <label for="q1_no">No</label><br><br>
-        
-                <label for="q2">2) Have you ever invested in any form of cryptocurrency before?</label><br>
-                <input type="radio" id="q2_yes" name="q2" value="yes">
-                <label for="q2_yes">Yes</label><br>
-                <input type="radio" id="q2_no" name="q2" value="no">
-                <label for="q2_no">No</label><br><br>
-        
-                <label for="q3">3) If you were to buy a cryptocurrency asset, which one would it be?</label><br>
-                <input type="text" id="q3" name="q3"><br><br>
-        
-                <label for="q4">4) Would you be willing to invest in cryptocurrency if the investment environment is right?</label><br>
-                <input type="radio" id="q4_yes" name="q4" value="yes">
-                <label for="q4_yes">Yes</label><br>
-                <input type="radio" id="q4_no" name="q4" value="no">
-                <label for="q4_no">No</label><br><br>
-        
-                <label for="q5">5) What is the maximum you would consider investing in cryptocurrency assets?</label><br>
-                <input type="number" id="q5" name="q5"><br><br>
-        
-                <label for="q6">6) Are you open to investing and trading in commodities such as gold and crude oil?</label><br>
-                <input type="radio" id="q6_yes" name="q6" value="yes">
-                <label for="q6_yes">Yes</label><br>
-                <input type="radio" id="q6_no" name="q6" value="no">
-                <label for="q6_no">No</label><br><br>
+                <label for="ever_used_crypto_for_payment_before"
+                  >1. Have you ever used cryptocurrency as a mode of payment
+                  before?</label
+                ><br />
+                <input
+                  type="radio"
+                  id="q1_yes"
+                  name="ever_used_crypto_for_payment_before"
+                  value="yes"
+                />
+                <label for="q1_yes">Yes</label><br />
+                <input
+                  type="radio"
+                  id="q1_no"
+                  name="ever_used_crypto_for_payment_before"
+                  value="no"
+                />
+                <label for="q1_no">No</label><br /><br />
+
+                <label for="q2"
+                  >2. Have you ever invested in any form of cryptocurrency
+                  before?</label
+                ><br />
+                <input
+                  type="radio"
+                  id="q2_yes"
+                  name="ever_invested_in_crypto_before"
+                  value="yes"
+                />
+                <label for="q2_yes">Yes</label><br />
+                <input
+                  type="radio"
+                  id="q2_no"
+                  name="ever_invested_in_crypto_before"
+                  value="no"
+                />
+                <label for="q2_no">No</label><br /><br />
+
+                <label for="q3"
+                  >3. If you were to buy a cryptocurrency asset, which one would
+                  it be?</label
+                ><br />
+                <input
+                  type="text"
+                  id="q3"
+                  name="what_cryptocurrency_would_you_purchase"
+                /><br /><br />
+
+                <label for="q4"
+                  >4. Would you be willing to invest in cryptocurrency if the
+                  investment environment is right?</label
+                ><br />
+                <input
+                  type="radio"
+                  id="q4_yes"
+                  name="what_cryptocurrency_would_you_purchase"
+                  value="yes"
+                />
+                <label for="q4_yes">Yes</label><br />
+                <input
+                  type="radio"
+                  id="q4_no"
+                  name="what_cryptocurrency_would_you_purchase"
+                  value="no"
+                />
+                <label for="q4_no">No</label><br /><br />
+
+                <label for="q5"
+                  >5. What is the maximum you would consider investing in
+                  cryptocurrency assets?</label
+                ><br />
+                <input
+                  type="number"
+                  id="q5"
+                  name="How_much_are_you_willing_to_invest_in_crypto_maximum"
+                /><br /><br />
+
+                <label for="q6"
+                  >6. Are you open to investing and trading in commodities such
+                  as gold and crude oil?</label
+                ><br />
+                <input
+                  type="radio"
+                  id="q6_yes"
+                  name="Would_you_like_to_trade_&_invest_in_gold_and_oil"
+                  value="yes"
+                />
+                <label for="q6_yes">Yes</label><br />
+                <input
+                  type="radio"
+                  id="q6_no"
+                  name="Would_you_like_to_trade_&_invest_in_gold_and_oil"
+                  value="no"
+                />
+                <label for="q6_no">No</label><br /><br />
+                <hr />
+
+                <h3 class="text-info">Section 2</h3>
+
                 <label for="investment_strategy"
-                  >1. Please indicate the desired emphasis of the investment
+                  >7. Please indicate the desired emphasis of the investment
                   strategy for your portfolio:</label
                 ><br />
                 <input
@@ -165,7 +241,7 @@
                 <label for="return">Total investment return</label><br /><br />
 
                 <label for="time_horizon"
-                  >2. Please check the selection that best describes your
+                  >8. Please check the selection that best describes your
                   investment time horizon:</label
                 ><br />
                 <input
@@ -198,7 +274,7 @@
                 <label for="over_10">Over 10 years</label><br /><br />
 
                 <label for="investment_strategy_appropriate"
-                  >3. Please select the investment strategy that you feel is
+                  >9. Please select the investment strategy that you feel is
                   most appropriate:</label
                 ><br />
                 <input
@@ -225,7 +301,7 @@
                 <label for="growth">Growth</label><br /><br />
 
                 <label for="primary_objective"
-                  >4. Please identify the objective below that most closely
+                  >10. Please identify the objective below that most closely
                   matches your primary objective by marking a number ‘1’ next to
                   it. Secondary objectives, if any, should be ranked starting
                   with the number ‘2’, then ‘3’, etc. There is no need to rank
@@ -241,7 +317,7 @@
                 ><br /><br />
 
                 <label for="risk_tolerance"
-                  >5. On the following scale please indicate your tolerance for
+                  >11. On the following scale please indicate your tolerance for
                   risk:</label
                 ><br />
                 <input
@@ -253,7 +329,7 @@
                 /><br /><br />
 
                 <label for="definition_of_risk"
-                  >6. Which of the following most closely reflects your
+                  >12. Which of the following most closely reflects your
                   definition of risk?</label
                 ><br />
                 <select id="definition_of_risk" name="definition_of_risk">
@@ -285,7 +361,7 @@
                 ><br /><br />
 
                 <label for="greatest_loss_tolerance"
-                  >7. What is the greatest loss you could tolerate over any
+                  >13. What is the greatest loss you could tolerate over any
                   single twelve-month period?</label
                 ><br />
                 <input
@@ -318,7 +394,7 @@
                 <label for="more_than_20">More than -20%</label><br /><br />
 
                 <label for="risk_tolerance_explanation"
-                  >8. Would you define your tolerance for risk in terms other
+                  >14. Would you define your tolerance for risk in terms other
                   than percentage of assets lost, such as the amount of money
                   you could accept losing over a specific time frame? Is there a
                   base level of wealth below which you cannot accept further
@@ -333,7 +409,7 @@
                 ><br /><br />
 
                 <label for="investment_decline_response"
-                  >9. If a particular investment in this portfolio declined by
+                  >15. If a particular investment in this portfolio declined by
                   20% in value and nothing changed fundamentally with regard to
                   this investment, what would you be most likely to do:</label
                 ><br />
@@ -360,7 +436,7 @@
                 <label for="buy_more">Buy More</label><br /><br />
 
                 <label for="action_in_2008"
-                  >10. What action was taken in 2008 when the S&P 500 declined
+                  >16. What action was taken in 2008 when the S&P 500 declined
                   37%?</label
                 ><br />
                 <input
@@ -393,7 +469,7 @@
                 <label for="held">Held the investment</label><br /><br />
 
                 <label for="risk_tolerance_impact_2008"
-                  >11. What impact did the events of 2008 have on your risk
+                  >17. What impact did the events of 2008 have on your risk
                   tolerance?</label
                 ><br />
                 <textarea
@@ -405,7 +481,7 @@
                 ><br /><br />
 
                 <label for="uncomfortable_assets"
-                  >12. Are there any asset classes or strategies that you are
+                  >18. Are there any asset classes or strategies that you are
                   not comfortable with and/or that you would like to learn more
                   about?</label
                 ><br />
@@ -418,7 +494,7 @@
                 ><br /><br />
 
                 <label for="other_significant_holdings"
-                  >13. Are there any other significant holdings (real estate,
+                  >19. Are there any other significant holdings (real estate,
                   art, etc.) that we should consider as we develop your
                   investment strategy?</label
                 ><br />
@@ -431,7 +507,7 @@
                 ><br /><br />
 
                 <label for="reasonable_objectives"
-                  >14. What would you consider to be reasonable objective(s) for
+                  >20. What would you consider to be reasonable objective(s) for
                   your investment portfolio? (Objectives can be stated in terms
                   of return and/or other quantifiable or non-quantifiable
                   measures.)</label
@@ -445,7 +521,7 @@
                 ><br /><br />
 
                 <label for="success_measure_time_period"
-                  >15. Over what time period do you feel it is reasonable to
+                  >21. Over what time period do you feel it is reasonable to
                   measure the success of achieving these objectives?</label
                 ><br />
                 <textarea
@@ -457,7 +533,7 @@
                 ><br /><br />
 
                 <label for="investment_manager_time"
-                  >16. What do you feel is a fair amount of time to stay with an
+                  >22. What do you feel is a fair amount of time to stay with an
                   investment manager who is falling short of the goals given him
                   or her?</label
                 ><br />
@@ -470,7 +546,7 @@
                 ><br /><br />
 
                 <label for="pressing_issues"
-                  >17. What do you think are the most pressing issues for the
+                  >23. What do you think are the most pressing issues for the
                   investment portfolio? (Please rank in order of importance with
                   1 being the highest ranking)</label
                 ><br />
@@ -483,7 +559,7 @@
                 ><br /><br />
 
                 <label for="greatest_concerns"
-                  >18. What are your greatest concerns about the portfolio’s
+                  >24. What are your greatest concerns about the portfolio’s
                   ability to meet its investment objectives going
                   forward?</label
                 ><br />
@@ -496,7 +572,7 @@
                 ><br /><br />
 
                 <label for="other_issues"
-                  >19. Please explain any other issues you feel are important
+                  >25. Please explain any other issues you feel are important
                   that we address as we review the investment program.</label
                 ><br />
                 <textarea
@@ -508,7 +584,7 @@
                 ><br /><br />
 
                 <label for="spending_liquidity_needs"
-                  >20. Please provide an estimate of your spending and liquidity
+                  >26. Please provide an estimate of your spending and liquidity
                   needs over the next 12 to 36 months. Please include expected
                   annual required distributions for living expenses, office
                   expenses, etc.</label
@@ -522,7 +598,7 @@
                 ><br /><br />
 
                 <label for="review_frequency"
-                  >21. How often would you like to get together to formally
+                  >27. How often would you like to get together to formally
                   review investment performance?</label
                 ><br />
                 <textarea
@@ -534,7 +610,7 @@
                 ><br /><br />
 
                 <label for="additional_comments"
-                  >22. Please list any other information or comments concerning
+                  >28. Please list any other information or comments concerning
                   your investment experience that you feel are important for us
                   to learn as we together develop your investment plan.</label
                 ><br />
@@ -560,7 +636,6 @@
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
     ></script>
-
 
     <script>
       document.getElementById("pressAm").onclick = function () {
