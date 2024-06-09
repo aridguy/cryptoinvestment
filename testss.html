@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Color Picker</title>
+</head>
+<body id="body">
+    <input onselect="changeBackgroundColor()" id="doColor" type="color" name="">
+    <script>
+        // Custom function to change the background color
+        function changeBackgroundColor() {
+            // Get the color input element by its ID
+            var colorPicker = document.getElementById('doColor');
+            // Set the body's background color to the selected color
+            document.getElementById("body").style.backgroundColor = colorPicker.value;
+        }
+
+        // Add an event listener to the color picker input element
+        // document.getElementById('doColor').addEventListener('input', changeBackgroundColor);
+
+        // Initial set of background color to the current value of the color picker
+        // changeBackgroundColor();
+    </script>
+</body>
+</html>

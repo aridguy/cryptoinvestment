@@ -164,9 +164,11 @@
                   it be?</label
                 ><br />
                 <input
+                class="form-control"
                   type="text"
                   id="q3"
                   name="what_cryptocurrency_would_you_purchase"
+
                 /><br /><br />
 
                 <label for="q4"
@@ -174,6 +176,7 @@
                   investment environment is right?</label
                 ><br />
                 <input
+                
                   type="radio"
                   id="q4_yes"
                   name="what_cryptocurrency_would_you_purchase"
@@ -193,6 +196,7 @@
                   cryptocurrency assets?</label
                 ><br />
                 <input
+                class="form-control"
                   type="number"
                   id="q5"
                   name="How_much_are_you_willing_to_invest_in_crypto_maximum"
@@ -310,6 +314,7 @@
                   you.</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="primary_objective"
                   name="primary_objective"
                   rows="4"
@@ -322,18 +327,21 @@
                   risk:</label
                 ><br />
                 <input
+                class="form-control"
                   type="range"
                   id="risk_tolerance"
                   name="risk_tolerance"
                   min="1"
                   max="10"
-                /><br /><br />
+                  value="5"
+                />
+                <span id="risk_value" class="display-6">5</span><br /><br />
 
                 <label for="definition_of_risk"
                   >12. Which of the following most closely reflects your
                   definition of risk?</label
                 ><br />
-                <select id="definition_of_risk" name="definition_of_risk">
+                <select class="form-control" id="definition_of_risk" name="definition_of_risk">
                   <option value="losing_money_any_period">
                     The probability of losing money over any time period
                   </option>
@@ -402,6 +410,7 @@
                   losses? If so, please explain.</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="risk_tolerance_explanation"
                   name="risk_tolerance_explanation"
                   rows="4"
@@ -474,6 +483,7 @@
                   tolerance?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="risk_tolerance_impact_2008"
                   name="risk_tolerance_impact_2008"
                   rows="4"
@@ -487,6 +497,7 @@
                   about?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="uncomfortable_assets"
                   name="uncomfortable_assets"
                   rows="4"
@@ -500,6 +511,7 @@
                   investment strategy?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="other_significant_holdings"
                   name="other_significant_holdings"
                   rows="4"
@@ -514,6 +526,7 @@
                   measures.)</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="reasonable_objectives"
                   name="reasonable_objectives"
                   rows="4"
@@ -526,6 +539,7 @@
                   measure the success of achieving these objectives?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="success_measure_time_period"
                   name="success_measure_time_period"
                   rows="4"
@@ -539,6 +553,7 @@
                   or her?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="investment_manager_time"
                   name="investment_manager_time"
                   rows="4"
@@ -552,6 +567,7 @@
                   1 being the highest ranking)</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="pressing_issues"
                   name="pressing_issues"
                   rows="4"
@@ -565,6 +581,7 @@
                   forward?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="greatest_concerns"
                   name="greatest_concerns"
                   rows="4"
@@ -577,6 +594,7 @@
                   that we address as we review the investment program.</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="other_issues"
                   name="other_issues"
                   rows="4"
@@ -591,6 +609,7 @@
                   expenses, etc.</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="spending_liquidity_needs"
                   name="spending_liquidity_needs"
                   rows="4"
@@ -603,6 +622,7 @@
                   review investment performance?</label
                 ><br />
                 <textarea
+                class="form-control"
                   id="review_frequency"
                   name="review_frequency"
                   rows="4"
@@ -616,6 +636,7 @@
                   to learn as we together develop your investment plan.</label
                 ><br />
                 <textarea
+                  class="form-control"
                   id="additional_comments"
                   name="additional_comments"
                   rows="4"
@@ -632,13 +653,37 @@
       </div>
     </main>
 
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12"></div>
+        </div>
+      </div>
+    </main>
+
     <!-- MDB -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.2.0/mdb.umd.min.js"
     ></script>
 
-
     <script src="investment-data.js"></script>
+
+    <!-- js code for tolerance of risk -->
+    <script>
+      // Function to update the displayed value
+      function updateRiskValue() {
+        var riskTolerance = document.getElementById("risk_tolerance");
+        var riskValue = document.getElementById("risk_value");
+        riskValue.textContent = riskTolerance.value;
+      }
+
+      // Get the range input element and add an event listener for input events
+      var riskTolerance = document.getElementById("risk_tolerance");
+      riskTolerance.addEventListener("input", updateRiskValue);
+
+      // Initial call to set the value on page load
+      updateRiskValue();
+    </script>
   </body>
 </html>
