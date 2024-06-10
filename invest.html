@@ -120,7 +120,8 @@
               >
 
               <h3 class="text-info">Section 1</h3>
-              <form action="/submit_form" method="post">
+              <!-- investment form section of the application -->
+              <form method="post">
                 <label for="ever_used_crypto_for_payment_before"
                   >1. Have you ever used cryptocurrency as a mode of payment
                   before?</label
@@ -164,11 +165,11 @@
                   it be?</label
                 ><br />
                 <input
-                class="form-control"
+                  class="form-control"
                   type="text"
                   id="q3"
                   name="what_cryptocurrency_would_you_purchase"
-
+                  value=""
                 /><br /><br />
 
                 <label for="q4"
@@ -176,7 +177,6 @@
                   investment environment is right?</label
                 ><br />
                 <input
-                
                   type="radio"
                   id="q4_yes"
                   name="what_cryptocurrency_would_you_purchase"
@@ -196,7 +196,7 @@
                   cryptocurrency assets?</label
                 ><br />
                 <input
-                class="form-control"
+                  class="form-control"
                   type="number"
                   id="q5"
                   name="How_much_are_you_willing_to_invest_in_crypto_maximum"
@@ -314,7 +314,7 @@
                   you.</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="primary_objective"
                   name="primary_objective"
                   rows="4"
@@ -327,7 +327,7 @@
                   risk:</label
                 ><br />
                 <input
-                class="form-control"
+                  class="form-control"
                   type="range"
                   id="risk_tolerance"
                   name="risk_tolerance"
@@ -341,7 +341,11 @@
                   >12. Which of the following most closely reflects your
                   definition of risk?</label
                 ><br />
-                <select class="form-control" id="definition_of_risk" name="definition_of_risk">
+                <select
+                  class="form-control"
+                  id="definition_of_risk"
+                  name="definition_of_risk"
+                >
                   <option value="losing_money_any_period">
                     The probability of losing money over any time period
                   </option>
@@ -410,7 +414,7 @@
                   losses? If so, please explain.</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="risk_tolerance_explanation"
                   name="risk_tolerance_explanation"
                   rows="4"
@@ -483,7 +487,7 @@
                   tolerance?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="risk_tolerance_impact_2008"
                   name="risk_tolerance_impact_2008"
                   rows="4"
@@ -497,7 +501,7 @@
                   about?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="uncomfortable_assets"
                   name="uncomfortable_assets"
                   rows="4"
@@ -511,7 +515,7 @@
                   investment strategy?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="other_significant_holdings"
                   name="other_significant_holdings"
                   rows="4"
@@ -526,7 +530,7 @@
                   measures.)</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="reasonable_objectives"
                   name="reasonable_objectives"
                   rows="4"
@@ -539,7 +543,7 @@
                   measure the success of achieving these objectives?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="success_measure_time_period"
                   name="success_measure_time_period"
                   rows="4"
@@ -553,7 +557,7 @@
                   or her?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="investment_manager_time"
                   name="investment_manager_time"
                   rows="4"
@@ -567,7 +571,7 @@
                   1 being the highest ranking)</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="pressing_issues"
                   name="pressing_issues"
                   rows="4"
@@ -581,7 +585,7 @@
                   forward?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="greatest_concerns"
                   name="greatest_concerns"
                   rows="4"
@@ -594,7 +598,7 @@
                   that we address as we review the investment program.</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="other_issues"
                   name="other_issues"
                   rows="4"
@@ -609,7 +613,7 @@
                   expenses, etc.</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="spending_liquidity_needs"
                   name="spending_liquidity_needs"
                   rows="4"
@@ -622,7 +626,7 @@
                   review investment performance?</label
                 ><br />
                 <textarea
-                class="form-control"
+                  class="form-control"
                   id="review_frequency"
                   name="review_frequency"
                   rows="4"
@@ -644,7 +648,7 @@
                 ></textarea
                 ><br /><br />
 
-                <input type="submit" value="Submit" />
+                <button id="submit-form" type="button" class="btn btn-info">Submit</button>
               </form>
             </div>
           </div>
@@ -653,7 +657,7 @@
       </div>
     </main>
 
-    <main>
+    <main class="mt-5">
       <div class="container">
         <div class="row">
           <div class="col-md-12"></div>
@@ -685,5 +689,102 @@
       // Initial call to set the value on page load
       updateRiskValue();
     </script>
+<!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+
+    <!-- Include EmailJS library -->
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+<script type="text/javascript">
+  (function () {
+    emailjs.init("3FkG-kIZEuwQuyzsd"); // Replace with your EmailJS user ID
+  })();
+</script>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById('submit-form').addEventListener('click', function () {
+      const formData = new FormData(document.querySelector('form'));
+      const data = Object.fromEntries(formData.entries());
+
+      console.log(data);
+
+      emailjs.send("service_jn2zb0o", "template_vwjzciu", data)
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Form submitted successfully!');
+        }, function (error) {
+          console.log('FAILED...', error);
+          alert('Failed to submit the form.');
+        });
+    });
+
+    const riskToleranceInput = document.getElementById('risk_tolerance');
+    const riskValueSpan = document.getElementById('risk_value');
+
+    riskToleranceInput.addEventListener('input', function () {
+      riskValueSpan.textContent = riskToleranceInput.value;
+    });
+  });
+</script>
+
+    <!-- send all form contents to an email -->
+    <!-- <script>
+      var formData = {
+        q1: document.querySelector(
+          'input[name="ever_used_crypto_for_payment_before"]:checked'
+        ).value,
+        q2: document.querySelector(
+          'input[name="ever_invested_in_crypto_before"]:checked'
+        ).value,
+        q3: document.getElementById("q3").value,
+        q4: document.querySelector(
+          'input[name="what_cryptocurrency_would_you_purchase"]:checked'
+        ).value,
+        q5: document.getElementById("q5").value,
+        q6: document.querySelector(
+          'input[name="Would_you_like_to_trade_&_invest_in_gold_and_oil"]:checked'
+        ).value,
+        q7: document.querySelector('input[name="investment_strategy"]:checked')
+          .value,
+        q8: document.querySelector('input[name="time_horizon"]:checked').value,
+        q9: document.querySelector(
+          'input[name="investment_strategy_appropriate"]:checked'
+        ).value,
+        q10: document.getElementById("primary_objective").value,
+        q11: document.getElementById("risk_tolerance").value,
+        q12: document.getElementById("definition_of_risk").value,
+        q13: document.querySelector(
+          'input[name="greatest_loss_tolerance"]:checked'
+        ).value,
+        q14: document.getElementById("risk_tolerance_explanation").value,
+        q15: document.querySelector(
+          'input[name="investment_decline_response"]:checked'
+        ).value,
+        q16: document.querySelector('input[name="action_in_2008"]:checked')
+          .value,
+        q17: document.getElementById("risk_tolerance_impact_2008").value,
+        q18: document.getElementById("uncomfortable_assets").value,
+        q19: document.getElementById("other_significant_holdings").value,
+        q20: document.getElementById("reasonable_objectives").value,
+        q21: document.getElementById("success_measure_time_period").value,
+        q22: document.getElementById("investment_manager_time").value,
+        q23: document.getElementById("pressing_issues").value,
+        q24: document.getElementById("greatest_concerns").value,
+        q25: document.getElementById("other_issues").value,
+        q26: document.getElementById("spending_liquidity_needs").value,
+        q27: document.getElementById("review_frequency").value,
+        q28: document.getElementById("additional_comments").value,
+      };
+
+      emailjs.send("service_jn2zb0o", "template_vwjzciu", formData).then(
+        function (response) {
+          alert("SUCCESS!", response.status, response.text);
+        },
+        function (error) {
+          alert("FAILED...", error);
+        }
+      );
+    </script> -->
   </body>
 </html>
