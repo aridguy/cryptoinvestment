@@ -27,15 +27,17 @@
   <body>
     <main>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+      <nav
+        class="navbar shadow-0 bg-white navbar-expand-lg navbar-white bg-body-tertiary"
+      >
         <!-- Container wrapper -->
         <div class="container">
           <!-- Navbar brand -->
-          <a class="navbar-brand me-2" href="https://mdbgo.com/">
+          <a class="navbar-brand me-2" href="index.html">
             <img
-              src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-              height="16"
-              alt="MDB Logo"
+              src="assets/logos/b.PNG"
+              height="30"
+              alt=" Logo"
               loading="lazy"
             />
           </a>
@@ -66,9 +68,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="services.html">Services</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="faq.html">FAQ</a>
-              </li>
+
               <li class="nav-item">
                 <a class="nav-link" href="contact.html">Contact</a>
               </li>
@@ -76,21 +76,24 @@
             <!-- Left links -->
 
             <div class="d-flex align-items-center">
+              <!-- <small>click here to download our questionaire</small> -->
               <a
                 href="invest.html"
-                data-mdb-ripple-init
-                type="button"
+                download="form.pdf"
                 class="btn btn-primary me-3"
+                data-mdb-ripple-init
               >
+                <i class="fas fa-circle-right"></i>
                 Invest Now
               </a>
+
+              <div id="google_translate_element"></div>
             </div>
           </div>
           <!-- Collapsible wrapper -->
         </div>
         <!-- Container wrapper -->
       </nav>
-      <!-- Navbar -->
     </main>
 
     <!-- body of the questionaira -->
@@ -648,7 +651,9 @@
                 ></textarea
                 ><br /><br />
 
-                <button id="submit-form" type="button" class="btn btn-info">Submit</button>
+                <button id="submit-form" type="button" class="btn btn-info">
+                  Submit
+                </button>
               </form>
             </div>
           </div>
@@ -689,44 +694,69 @@
       // Initial call to set the value on page load
       updateRiskValue();
     </script>
-<!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
+    <!-- <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script> -->
 
     <!-- Include EmailJS library -->
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.emailjs.com/dist/email.min.js"
+    ></script>
 
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("3FkG-kIZEuwQuyzsd"); // Replace with your EmailJS user ID
+      })();
+    </script>
 
-<script type="text/javascript">
-  (function () {
-    emailjs.init("3FkG-kIZEuwQuyzsd"); // Replace with your EmailJS user ID
-  })();
-</script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        document
+          .getElementById("submit-form")
+          .addEventListener("click", function () {
+            const formData = new FormData(document.querySelector("form"));
+            const data = Object.fromEntries(formData.entries());
 
-<script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('submit-form').addEventListener('click', function () {
-      const formData = new FormData(document.querySelector('form'));
-      const data = Object.fromEntries(formData.entries());
+            console.log(data);
 
-      console.log(data);
+            emailjs.send("service_jn2zb0o", "template_vwjzciu", data).then(
+              function (response) {
+                console.log("SUCCESS!", response.status, response.text);
+                // alert('Form submitted successfully!');
+                const Toast = Swal.mixin({
+                  toast: true,
+                  position: "top-end",
+                  showConfirmButton: false,
+                  timer: 5000,
+                  timerProgressBar: true,
+                  didOpen: (toast) => {
+                    toast.onmouseenter = Swal.stopTimer;
+                    toast.onmouseleave = Swal.resumeTimer;
+                  },
+                });
+                Toast.fire({
+                  icon: "success",
+                  title: "Signed in successfully",
+                });
+              },
 
-      emailjs.send("service_jn2zb0o", "template_vwjzciu", data)
-        .then(function (response) {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Form submitted successfully!');
-        }, function (error) {
-          console.log('FAILED...', error);
-          alert('Failed to submit the form.');
+              setTimeout(() => {
+                window.location.replace("index.html");
+              }, 8000),
+              function (error) {
+                console.log("FAILED...", error);
+                alert("Failed to submit the form.");
+              }
+            );
+          });
+
+        const riskToleranceInput = document.getElementById("risk_tolerance");
+        const riskValueSpan = document.getElementById("risk_value");
+
+        riskToleranceInput.addEventListener("input", function () {
+          riskValueSpan.textContent = riskToleranceInput.value;
         });
-    });
-
-    const riskToleranceInput = document.getElementById('risk_tolerance');
-    const riskValueSpan = document.getElementById('risk_value');
-
-    riskToleranceInput.addEventListener('input', function () {
-      riskValueSpan.textContent = riskToleranceInput.value;
-    });
-  });
-</script>
+      });
+    </script>
 
     <!-- send all form contents to an email -->
     <!-- <script>
@@ -786,5 +816,20 @@
         }
       );
     </script> -->
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+      var Tawk_API = Tawk_API || {},
+        Tawk_LoadStart = new Date();
+      (function () {
+        var s1 = document.createElement("script"),
+          s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = "https://embed.tawk.to/64301e9c31ebfa0fe7f70b33/1gtdvf4uf";
+        s1.charset = "UTF-8";
+        s1.setAttribute("crossorigin", "*");
+        s0.parentNode.insertBefore(s1, s0);
+      })();
+    </script>
+    <!--End of Tawk.to Script-->
   </body>
 </html>
